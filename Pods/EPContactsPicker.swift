@@ -51,6 +51,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   
   open var overridingTitle: String?
   open var overridingTitleBarColor: UIColor?
+  open var overridingTitleBarTintColor: UIColor?
   open var overridingTitleBarFontAttributes: [String : Any]?
   
   
@@ -71,6 +72,10 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
     
     if let titleBarFontColor = overridingTitleBarFontAttributes {
       self.navigationController?.navigationBar.titleTextAttributes = titleBarFontColor
+    }
+    
+    if let titleBarTintColor = overridingTitleBarTintColor {
+      navigationController?.navigationBar.tintColor = titleBarTintColor
     }
     
     registerContactCell()
