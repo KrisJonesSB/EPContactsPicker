@@ -37,6 +37,16 @@
 		F4C1C9791BDF9227001AA643 /* EPContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPContactCell.xib; sourceTree = "<group>"; };
 		F4C1C97A1BDF9227001AA643 /* EPContactsPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPContactsPicker.swift; sourceTree = "<group>"; };
 		F4C1C97B1BDF9227001AA643 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
+		FCCCA1D51E5793A500ECA43C /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		FCCCA1D61E5793A500ECA43C /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FCCCA1D71E5793A500ECA43C /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FCCCA1D81E5793A500ECA43C /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FCCCA1D91E5793A500ECA43C /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		FCCCA1DA1E5793A500ECA43C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		FCCCA1DB1E5793A500ECA43C /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		FCCCA1DC1E5793A500ECA43C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		FCCCA1DD1E5793A500ECA43C /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		FCCCA1DE1E5793A500ECA43C /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 		F4C1C9401BDF8AB7001AA643 /* Contacts Picker */ = {
 			isa = PBXGroup;
 			children = (
+				FCCCA1D41E57938D00ECA43C /* Fonts */,
 				F4C1C9751BDF9227001AA643 /* EPContactsPicker */,
 				F4C1C9701BDF8BBA001AA643 /* ViewController.swift */,
 				F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */,
@@ -95,6 +106,23 @@
 			name = EPContactsPicker;
 			path = Pods;
 			sourceTree = SOURCE_ROOT;
+		};
+		FCCCA1D41E57938D00ECA43C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FCCCA1D51E5793A500ECA43C /* OpenSans-Bold.ttf */,
+				FCCCA1D61E5793A500ECA43C /* OpenSans-BoldItalic.ttf */,
+				FCCCA1D71E5793A500ECA43C /* OpenSans-ExtraBold.ttf */,
+				FCCCA1D81E5793A500ECA43C /* OpenSans-ExtraBoldItalic.ttf */,
+				FCCCA1D91E5793A500ECA43C /* OpenSans-Italic.ttf */,
+				FCCCA1DA1E5793A500ECA43C /* OpenSans-Light.ttf */,
+				FCCCA1DB1E5793A500ECA43C /* OpenSans-LightItalic.ttf */,
+				FCCCA1DC1E5793A500ECA43C /* OpenSans-Regular.ttf */,
+				FCCCA1DD1E5793A500ECA43C /* OpenSans-Semibold.ttf */,
+				FCCCA1DE1E5793A500ECA43C /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
