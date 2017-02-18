@@ -53,6 +53,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   open var overridingTitleBarColor: UIColor?
   open var overridingTitleBarTintColor: UIColor?
   open var overridingTitleBarFontAttributes: [String : Any]?
+  open var overridingDoneCompletionHandler = {}
   
   
   // MARK: - Lifecycle Methods
@@ -354,7 +355,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   
   func onTouchDoneButton() {
     contactDelegate?.epContactPicker(self, didSelectMultipleContacts: selectedContacts)
-    dismiss(animated: true, completion: nil)
+    dismiss(animated: true, completion: overridingDoneCompletionHandler)
   }
   
   // MARK: - Search Actions
