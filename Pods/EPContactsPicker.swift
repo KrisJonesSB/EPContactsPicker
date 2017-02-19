@@ -211,19 +211,23 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
       do {
         try contactsStore?.enumerateContacts(with: contactFetchRequest, usingBlock: { (contact, stop) -> Void in
           //Ordering contacts based on alphabets in firstname
-          contactsArray.append(contact)
-          var key: String = "#"
-          //If ordering has to be happening via family name change it here.
-          if let firstLetter = contact.givenName[0..<1] , firstLetter.containsAlphabets() {
-            key = firstLetter.uppercased()
-          }
-          var contacts = [CNContact]()
           
-          if let segregatedContact = self.orderedContacts[key] {
-            contacts = segregatedContact
+          if contact.phoneNumbers.count > 0 {
+            
+            contactsArray.append(contact)
+            var key: String = "#"
+            //If ordering has to be happening via family name change it here.
+            if let firstLetter = contact.givenName[0..<1] , firstLetter.containsAlphabets() {
+              key = firstLetter.uppercased()
+            }
+            var contacts = [CNContact]()
+            
+            if let segregatedContact = self.orderedContacts[key] {
+              contacts = segregatedContact
+            }
+            contacts.append(contact)
+            self.orderedContacts[key] = contacts
           }
-          contacts.append(contact)
-          self.orderedContacts[key] = contacts
           
         })
         self.sortedContactKeys = Array(self.orderedContacts.keys).sorted(by: <)

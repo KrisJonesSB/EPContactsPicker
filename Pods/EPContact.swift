@@ -46,7 +46,7 @@ open class EPContact {
         }
         
 		for phoneNumber in contact.phoneNumbers {
-			guard let phoneLabel = phoneNumber.label else { continue }
+      let phoneLabel = phoneNumber.label ?? "Phone"      
 			let phone = phoneNumber.value.stringValue
 			
 			phoneNumbers.append((phone,phoneLabel))
