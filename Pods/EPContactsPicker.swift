@@ -52,7 +52,7 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   open var overridingTitle: String?
   open var overridingTitleBarColor: UIColor?
   open var overridingTitleBarTintColor: UIColor?
-  open var overridingTitleBarFontAttributes: [String : Any]?
+  open var overridingTitleBarFontAttributes: [NSAttributedStringKey : Any]?
   open var overridingDoneCompletionHandler = {}
   
   
@@ -352,12 +352,12 @@ open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UIS
   
   // MARK: - Button Actions
   
-  func onTouchCancelButton() {
+    @objc func onTouchCancelButton() {
     contactDelegate?.epContactPicker(self, didCancel: NSError(domain: "EPContactPickerErrorDomain", code: 2, userInfo: [ NSLocalizedDescriptionKey: "User Canceled Selection"]))
     dismiss(animated: true, completion: nil)
   }
   
-  func onTouchDoneButton() {
+    @objc func onTouchDoneButton() {
     contactDelegate?.epContactPicker(self, didSelectMultipleContacts: selectedContacts)
     dismiss(animated: true, completion: overridingDoneCompletionHandler)
   }
